@@ -27,6 +27,10 @@ public class Task extends BaseEntity {
     private WorkType workType;
 
     @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "deadline", nullable = false, updatable = false)
+    private Date deadline;
+
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "started_at", nullable = false, updatable = false)
     private Date startedAt;
 
