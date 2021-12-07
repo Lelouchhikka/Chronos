@@ -1,5 +1,6 @@
-package com.itstep.trelloanalog.entities;
+package com.itstep.trelloanalog.models;
 
+import com.itstep.trelloanalog.entities.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="db_users")
-public class DbUser extends BaseEntity{
+public class DbUser extends BaseEntity {
 
     @Column(name = "email", unique = true)
     private String email;

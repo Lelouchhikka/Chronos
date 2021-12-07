@@ -1,5 +1,6 @@
-package com.itstep.trelloanalog.entities;
+package com.itstep.trelloanalog.models;
 
+import com.itstep.trelloanalog.entities.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
