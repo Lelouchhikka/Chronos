@@ -1,5 +1,6 @@
-package com.itstep.trelloanalog.entities;
+package com.itstep.trelloanalog.models;
 
+import com.itstep.trelloanalog.entities.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,8 +12,8 @@ import javax.persistence.Table;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="work_types")
-public class WorkType extends BaseEntity {
+@Table(name="statuses")
+public class Status extends BaseEntity {
 
     private String name;
 }
