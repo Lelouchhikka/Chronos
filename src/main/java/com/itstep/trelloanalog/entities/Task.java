@@ -1,3 +1,4 @@
+
 package com.itstep.trelloanalog.entities;
 
 import lombok.AllArgsConstructor;
