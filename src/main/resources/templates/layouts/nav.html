@@ -37,10 +37,6 @@
                         <a class="nav-link" style="color:white" th:href="@{'/admin'}">Admin</a>
                     </li>
                 </ul>
-                <form class="d-flex" th:action="${'/search'}" sec:authorize="isAuthenticated()">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="name" id="name">
-                    <button class="btn btn-outline-success" type="submit" >Search</button>
-                </form>
             </div>
         </div>
     </nav>
