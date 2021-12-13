@@ -2,6 +2,8 @@ package com.itstep.trelloanalog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 public class TrelloAnalogApplication {
@@ -10,4 +12,8 @@ public class TrelloAnalogApplication {
         SpringApplication.run(TrelloAnalogApplication.class, args);
     }
 
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 }
