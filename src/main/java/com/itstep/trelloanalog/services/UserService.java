@@ -1,9 +1,9 @@
-package com.itstep.trelloanalog.service;
+package com.itstep.trelloanalog.services;
 
 import com.itstep.trelloanalog.entities.DbUser;
 import com.itstep.trelloanalog.entities.Role;
-import com.itstep.trelloanalog.repository.RoleRepository;
-import com.itstep.trelloanalog.repository.UserRepository;
+import com.itstep.trelloanalog.repositories.RoleRepository;
+import com.itstep.trelloanalog.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
