@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/nav}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.ultraq.net.nz/thymeleaf/layout ">
+<div layout:fragment="main_section">
+    <div class="d-flex justify-content-center">
+        <h1>Учет рабочего времени</h1>
+    </div>
+    <hr/>
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <form  th:action="${'/statistic'}">
+            <button class="btn" style="color:black; border-color:#4e81d4">Посмотреть персональную статистику</button>
+        </form>
+        <form class="d-flex justify-content-between align-items-center" th:action="${'/search'}">
+            <div class="d-flex mx-5">
+                <h5 class="mx-2">Сегодня:</h5>
+                <input type="date" style="color:black; border-color:#4e81d4; border-radius:5px;" name="date" id="date">
+            </div>
+            <dev class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="name" id="name">
+                <button class="btn " style="color:black; border-color:#4e81d4"  type="submit" >Search</button>
+            </dev>
+        </form>
+    </div>
+    <table class="table table-hover mt-2">
+        <thead>
+            <tr>
+                <th scope="col">№</th>
+                <th scope="col">Проект</th>
+                <th scope="col">Дедлайн</th>
+                <th scope="col">Тип работы</th>
+                <th scope="col">Затраченное время</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
