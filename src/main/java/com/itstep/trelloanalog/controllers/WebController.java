@@ -1,37 +1,22 @@
 package com.itstep.trelloanalog.controllers;
 
-import com.itstep.trelloanalog.entities.Task;
-import com.itstep.trelloanalog.services.StatusService;
-import com.itstep.trelloanalog.services.TaskService;
-import com.itstep.trelloanalog.services.WorkTypeService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.Date;
-
+@RequiredArgsConstructor
 @Controller
 public class WebController {
-
-    private final TaskService taskService;
-
-    private final StatusService statusService;
-
-    private final WorkTypeService workTypeService;
-
-    public WebController(TaskService taskService, StatusService statusService, WorkTypeService workTypeService) {
-        this.taskService = taskService;
-        this.statusService = statusService;
-        this.workTypeService = workTypeService;
-    }
-
     @RequestMapping(value="/login")
     public String login() {
         return "login";
     }
 
     @GetMapping(value = "/")
-    public String index() {
+    public String index(Model mav) {
+        mav.addAttribute("users", userService.allUsers());
+        mav.addAttribute("user",new DbUser());
+        mav.addAttribute("project",new Project());
         return "mainPage";
     }
 
