@@ -1,8 +1,18 @@
 package com.itstep.trelloanalog.controllers;
 
+import com.itstep.trelloanalog.entities.DbUser;
+import com.itstep.trelloanalog.entities.Project;
+import com.itstep.trelloanalog.entities.Task;
+import com.itstep.trelloanalog.services.StatusService;
+import com.itstep.trelloanalog.services.TaskService;
+import com.itstep.trelloanalog.services.UserService;
+import com.itstep.trelloanalog.services.WorkTypeService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Date;
 
 @RequiredArgsConstructor
 @Controller
@@ -11,6 +21,13 @@ public class WebController {
     public String login() {
         return "login";
     }
+
+    private final TaskService taskService;
+
+    private final StatusService statusService;
+
+    private final WorkTypeService workTypeService;
+    private final UserService userService;
 
     @GetMapping(value = "/")
     public String index(Model mav) {
